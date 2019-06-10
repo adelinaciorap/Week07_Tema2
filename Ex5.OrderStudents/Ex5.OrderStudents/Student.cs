@@ -12,21 +12,21 @@ namespace Ex5.OrderStudents
         private string lastName;
         private int age;
 
-        public Student(string firstname, string lastname)
+        public Student(string firstName, string lastName)
         {
 
-            this.FirstName = firstname;
-            this.LastNAme = lastname;
+            this.FirstName = firstName;
+            this.LastName = lastName;
           
         }
 
         public string FirstName { get; set; }
-        public string LastNAme { get; set; }
+        public string LastName { get; set; }
         
 
         public override string ToString()
         {
-            string output = string.Format("Student: {0} {1} ", this.FirstName, this.LastNAme);
+            string output = string.Format("Student: {0} {1} ", this.FirstName, this.LastName);
             return output.ToString();
         }
     }

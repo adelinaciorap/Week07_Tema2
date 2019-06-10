@@ -10,41 +10,41 @@ namespace Ex5.OrderStudents
     {
         static void Main(string[] args)
         {
-           Student [] students=
-                {
-                 new Student("Ana", "Dobre", 23),
-                 new Student("Petru", "Movila", 21),
-                 new Student ("Gica", "Petrescu", 32),
-                 new Student ("Andrei", "Bostan", 24),
-                 new Student("Raluca", "Marian", 19),
-                 new Student("Carmen", "Lupu", 23),
-                 new Student("Andreaa", "Papuc", 30),
-                 
+            Student[] students =
+                 {
+                 new Student("Ana", "Dobre"),
+                 new Student("Petru", "Movila"),
+                 new Student ("Gica", "Petrescu"),
+                 new Student ("Andrei", "Bostan"),
+                 new Student("Raluca", "Marian"),
+                 new Student("Carmen", "Lupu"),
+                 new Student("Andreaa", "Papuc"),
+
             };
-           
+
 
             //Lambda sorting
+            var orderedStudents =
+               students.OrderByDescending(student => student.FirstName).
+               ThenByDescending(student => student.LastName);
 
-            Console.WriteLine("Lambda sorting:");
-
-            var orderStudents =
-                student.OrderByDescending(student => student.FirstName).ThenByDescending(students.LastName);
-
-            foreach(var student in orderStudents)
+            foreach (var student in orderedStudents)
             {
                 Console.WriteLine(student);
             }
+            Console.WriteLine();
 
-            Console.WriteLine("LINQ sorting:");
+            //sorting with LINQ
+            orderedStudents =
+                from student in students
+                orderby student.FirstName descending, student.LastName descending
+                select student;
 
-            var orderStudents2 = from student in students
-                                orderby student.FirstName descending, student.LastName descending
-                                select student;
-
-            foreach(var student in orderStudents2)
+            foreach (var student in orderedStudents)
             {
                 Console.WriteLine(student);
             }
+            Console.WriteLine();
         }
     }
 }
