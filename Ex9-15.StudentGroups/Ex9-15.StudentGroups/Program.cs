@@ -12,9 +12,9 @@ namespace Ex9_15.StudentGroups
 
             var students = new List<Student>();
             students.Add(new Student("Daniel", "Iacob", "01234", "0756343453", "dan@avg.bg", new List<int> { 8, 5, 8, 2 }, 2));
-            students.Add(new Student("Paul", "Suciu", "07565", "0734545455", "paulsu@gmail.com", new List<int> { 8, 8, 9, 9 }, 1));
-            students.Add(new Student("Ghita", "Muresan", "34455", "0733222204", "ghita@alaa.net", new List<int> { 2, 7, 2, 6 }, 1));
-            students.Add(new Student("Vlad", "Nisora", "62134", "+32 725555800", "thevlad@avg.bg", new List<int> { 8, 6, 7, 10 }, 1));
+            students.Add(new Student("Paul", "Suciu", "075650", "0734545455", "paulsu@gmail.com", new List<int> { 8, 8, 9, 9 }, 1));
+            students.Add(new Student("Ghita", "Muresan", "344466", "0733222204", "ghita@alaa.net", new List<int> { 2, 7, 2, 6 }, 1));
+            students.Add(new Student("Vlad", "Nisora", "621366", "+32 725555800", "thevlad@avg.bg", new List<int> { 8, 6, 7, 10 }, 1));
             students.Add(new Student("Sergiu", "Plavan", "62134", "+40 72454560", "serge@yahoo.com", new List<int> { 8, 10, 10, 10 }, 2));
 
             Console.WriteLine("All students: ");
@@ -88,7 +88,14 @@ namespace Ex9_15.StudentGroups
              
             }
 
-
+            Console.WriteLine(" Marks of the students that enrolled in 2006.");
+            var studentsEnrolled2006 = from student in students
+                                       where student.FN.EndsWith("66")
+                                       select student;
+            foreach (var student in studentsEnrolled2006)
+            {
+                Console.WriteLine(student);
+            }
         }
     }
 }
