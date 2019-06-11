@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4AB77938-BFA5-4CDD-AD2F-6E461F0566F5}</ProjectGuid>
+    <ProjectGuid>{99B948FA-1272-477C-8740-D5F8F39CF054}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Ex16.Groups</RootNamespace>
-    <AssemblyName>Ex16.Groups</AssemblyName>
+    <RootNamespace>Ex17.LongestString</RootNamespace>
+    <AssemblyName>Ex17.LongestString</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,10 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Group.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Student.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

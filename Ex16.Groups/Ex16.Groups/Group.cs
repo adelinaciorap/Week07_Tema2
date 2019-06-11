@@ -2,10 +2,10 @@
 {
     public class Group
     {
-        public Group(int number, string name)
+        public Group(int number, string department)
         {
             this.GroupNumber = number;
-            this.DepartamentName = name;
+            this.DepartamentName = department;
         }
 
         public int GroupNumber { get; set; }

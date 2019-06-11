@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4AB77938-BFA5-4CDD-AD2F-6E461F0566F5}</ProjectGuid>
+    <ProjectGuid>{0FF6ACF8-6F75-4B6B-9DC8-0D9BF3EE91E4}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Ex16.Groups</RootNamespace>
-    <AssemblyName>Ex16.Groups</AssemblyName>
+    <RootNamespace>Ex18.GroupedByGroupNumber</RootNamespace>
+    <AssemblyName>Ex18.GroupedByGroupNumber</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Group.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs" />
